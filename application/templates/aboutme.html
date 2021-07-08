@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title mb-5 text-center">Timeline</h4>
+    
+                    <div class="hori-timeline" dir="ltr">
+                        <ul class="list-inline events">
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-primary text-primary">1996</div>
+                                    <h5 class="font-size-16">Born In Iowa City</h5>
+                                    <p class="text-muted">I was born and raised in Iowa City, Iowa where I attended Regina Elementary and High School.</p>
+                                    <div>
+                                        <button onclick="myFunction('iowa')" class="btn btn-primary btn-sm">Read more</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-success text-success">2014</div>
+                                    <h5 class="font-size-16">Founded Fourtune</h5>
+                                    <p class="text-muted">Three of my best friends and I started a business in developed and developing technologies.</p>
+                                    <div>
+                                        <button onclick="myFunction('fourtune')" class="btn btn-primary btn-sm">Read more</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-danger text-danger">2019</div>
+                                    <h5 class="font-size-16">Graduated College</h5>
+                                    <p class="text-muted">Graduated from the University of Missouri with a Bachelors of Science in Industrial Engineering.</p>
+                                    <div>
+                                        <button onclick="myFunction('college')" class="btn btn-primary btn-sm">Read more</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-warning text-warning">2020</div>
+                                    <h5 class="font-size-16">Moved to Nashville</h5>
+                                    <p class="text-muted">Moved to Nashville to be a Product Engineer for Asurion.</p>
+                                    <div>
+                                        <button onclick="myFunction('nashville')" class="btn btn-primary btn-sm">Read more</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <div id="demo" class='container-fluid '>
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <h3 id='title'></h3>
+                <p id='text'></p>
+            </div>
+            <div class="col-4">
+                <img id='pic' src="#" style="visibility:hidden" class='img-fluid'/>
+            </div>
+        </div>    
+    </div>
+    <script>
+        function myFunction(type) {
+            if (type == "iowa"){
+                document.getElementById("title").innerHTML = "Iowa City";
+                document.getElementById("text").innerHTML = "i was born here";
+                document.getElementById("pic").style.visibility = "visible";
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/brown.png")) {
+                    Image_Id.src = "/static/brown.png";
+                }
+                
+            } else if (type == 'fourtune'){
+                document.getElementById("title").innerHTML = "Fourtune"
+                document.getElementById("text").innerHTML = "The Company"
+                document.getElementById("pic").style.visibility='visible'
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/nash.jpg")) {
+                    Image_Id.src = "/static/nash.jpg";
+                }
+                
+                
+
+            } else if (type == 'college'){
+                document.getElementById("title").innerHTML = "College"
+                document.getElementById("text").innerHTML = "Missouri"
+                document.getElementById("pic").innerHTML = "Iowa City"
+                document.getElementById("pic").style.visibility = "visible";
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/brown.png")) {
+                    Image_Id.src = "/static/brown.png";
+                }
+
+            } else if (type == 'nashville'){
+                document.getElementById("title").innerHTML = "Nashville"
+                document.getElementById("text").innerHTML = "Music City"
+                document.getElementById("pic").innerHTML = "Iowa City"
+                document.getElementById("pic").style.visibility='visible'
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/nash.jpg")) {
+                    Image_Id.src = "/static/nash.jpg";
+                }
+            }
+        }
+    </script>
+{% endblock %}
