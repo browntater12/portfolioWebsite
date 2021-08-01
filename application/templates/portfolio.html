@@ -1,5 +1,65 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Portfolio</h1>
+<div class="container">
+    <div class="h1 text-center mt-4">Projects</div>
+    <div class="row  mt-5">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="card mx-auto">
+                <img src="/static/test.png" class="card-img-top img-fluid" alt="..." >
+                <div class="card-body">
+                    <h5 class="card-title">Fourtune Website</h5>
+                    <p class="card-text">Small business founded by myself and three friends. This website serves multiple functions.</p>
+                    <a href="#" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="card mx-auto">
+                <video class='card-img-top' autoplay muted loop>
+                    <source src="/static/ticket.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                  </video>
+                <div class="card-body">
+                    <h5 class="card-title">Ticketing System</h5>
+                    <p class="card-text">Light weight ticketing system designed for low volume. Database built with SQLite and hosted via IIS.</p>
+                    <a href="https://github.com/browntater12/ticketingApplication" target="_blank" class="btn btn-primary">Code Base</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="card mx-auto">
+                <a href="/static/dash.PNG" target="_blank"><img src="/static/dash.PNG" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                    <h5 class="card-title">Monitoring Application</h5>
+                    <p class="card-text">Hourly API pulls with custom data structure aggregation. Dashboard designed with Dash.</p>
+                    <a href="https://github.com/browntater12/MonitoringApp" target="_blank" class="btn btn-primary">Code Base</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="card mx-auto">
+                <img src="/static/wtf.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">WTF Blog</h5>
+                    <p class="card-text">What the Fourtune? A small blog dedicated to outlandish ideas.</p>
+                    <a href="#" class="btn btn-primary">Visit Site</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="card mx-auto">
+                <img src="/static/alpaca.PNG" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Algorithm Trading</h5>
+                    <p class="card-text">Still in planning and data aggregation phase.</p>
+                    <a href="https://alpaca.markets/" target="_blank" class="btn btn-primary">Visit API</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4"></div>
+    </div>
+</div>
 {% endblock %}

@@ -6,8 +6,14 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title mb-5 text-center">Timeline</h4>
-    
+                    <div class="row mb-3 mt-3 justify-content-start">
+                        <div class="col text-start">
+                            <h4 class="card-title">Timeline</h4>
+                        </div>
+                        <div class="col text-end">
+                            <button type="button" class=" btn btn-primary"><a href="/static/files/Resume.docx" download style="color:#fff; text-decoration:none"> Download Resume</a></button>
+                        </div>
+                    </div>
                     <div class="hori-timeline" dir="ltr">
                         <ul class="list-inline events">
                             <li class="list-inline-item event-list">
@@ -46,7 +52,7 @@
                                     <h5 class="font-size-16">Moved to Nashville</h5>
                                     <p class="text-muted">Moved to Nashville to be a Product Engineer for Asurion.</p>
                                     <div>
-                                        <button onclick="myFunction('nashville')" class="btn btn-primary btn-sm">Read more</button>
+                                        <a href="#demo"><button onclick="myFunction('nashville')" class="btn btn-primary btn-sm">Read more</button></a>
                                     </div>
                                 </div>
                             </li>
@@ -57,57 +63,55 @@
             <!-- end card -->
         </div>
     </div>
-    <div id="demo" class='container-fluid '>
+    <div id="demo" class='container-fluid mt-3'>
+        <br>
         <div class="row justify-content-center">
-            <div class="col-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <h3 id='title'></h3>
                 <p id='text'></p>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="height: 600px; height: 400px;">
                 <img id='pic' src="#" style="visibility:hidden" class='img-fluid'/>
             </div>
         </div>    
     </div>
+    
     <script>
         function myFunction(type) {
             if (type == "iowa"){
-                document.getElementById("title").innerHTML = "Iowa City";
-                document.getElementById("text").innerHTML = "i was born here";
+                document.getElementById("title").innerHTML = "Iowa";
+                document.getElementById("text").innerHTML = "&emsp; Family is my priority, from left to right we have Julie, Kieler, me, Kennedy, and Mark. I am the eldest child. My parents are also native Iowans, so our roots run deep in Iowa. We are a very adventurous group, who love the outdoors. Growing up I attended Regina Catholic Education Center. During highschool I became a 6-time state champion between soccer and football. ";
                 document.getElementById("pic").style.visibility = "visible";
                 var Image_Id = document.getElementById('pic');
-                if (!Image_Id.src.match("/static/brown.png")) {
-                    Image_Id.src = "/static/brown.png";
+                if (!Image_Id.src.match("/static/iowa.jpg")) {
+                    Image_Id.src = "/static/iowa.jpg";
                 }
                 
             } else if (type == 'fourtune'){
                 document.getElementById("title").innerHTML = "Fourtune"
-                document.getElementById("text").innerHTML = "The Company"
+                document.getElementById("text").innerHTML = "&emsp; Fourtune, a small business, started my senior year of high school flipping computer parts. Initially we were involved in buying older DNA sequencing systems and reselling them to retail consumers. Once that model had run its course we became involved in crypto mining by building custom mining rigs. After mining we pivoted to 3D printing, there we were awarded seed money to pursue an idea in 3D design. Today Fourtune has become a media and entertainment business specializing in events planning. "
                 document.getElementById("pic").style.visibility='visible'
                 var Image_Id = document.getElementById('pic');
-                if (!Image_Id.src.match("/static/nash.jpg")) {
-                    Image_Id.src = "/static/nash.jpg";
-                }
+                if (!Image_Id.src.match("/static/image.jpeg")) {
+                    Image_Id.src = "/static/image.jpeg";
+                } 
                 
-                
-
             } else if (type == 'college'){
                 document.getElementById("title").innerHTML = "College"
-                document.getElementById("text").innerHTML = "Missouri"
-                document.getElementById("pic").innerHTML = "Iowa City"
+                document.getElementById("text").innerHTML = "&emsp;I attended the University of Missouri where I recieved my Bachelors of Science in Industrial Engineering. While  at Mizzou I joined the Alpha Tau Omega fraternity and met some of my best friends. During college I got my first taste of software and absolutely hated it. I mostly to hardware during college with 3D printing and iPhone repair."
                 document.getElementById("pic").style.visibility = "visible";
                 var Image_Id = document.getElementById('pic');
-                if (!Image_Id.src.match("/static/brown.png")) {
-                    Image_Id.src = "/static/brown.png";
+                if (!Image_Id.src.match("/static/miz.JPG")) {
+                    Image_Id.src = "/static/miz.JPG";
                 }
 
             } else if (type == 'nashville'){
                 document.getElementById("title").innerHTML = "Nashville"
-                document.getElementById("text").innerHTML = "Music City"
-                document.getElementById("pic").innerHTML = "Iowa City"
+                document.getElementById("text").innerHTML = "&emsp;In college started repairing iPhones, which led me to Asurion. I was interested in businesses that repaired professionally and found the team in Nashville. After interning with Asurion, I knew it was a fit and moved to Nashville post graduation. While at Asurion I've developed a passion for software, and actively continue my education in it."
                 document.getElementById("pic").style.visibility='visible'
                 var Image_Id = document.getElementById('pic');
-                if (!Image_Id.src.match("/static/nash.jpg")) {
-                    Image_Id.src = "/static/nash.jpg";
+                if (!Image_Id.src.match("/static/download.jpg")) {
+                    Image_Id.src = "/static/download.jpg";
                 }
             }
         }

@@ -1,5 +1,140 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>HOME</h1>
+<style>
+   .section{
+       position: relative;
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       overflow: hidden;
+   } 
+   .section h1 {
+       text-align: center;
+       font-size: 6rem;
+       padding: 20px;
+       margin: 15;
+       z-index: 1;
+       opacity: 0.9;
+
+   }
+   .col {
+       text-align: center;
+       padding: 20px;
+       margin: 15;
+       z-index: 1;
+       opacity: 0.9;
+
+   }
+
+   .video-container{
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+   }
+    .color-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: lightblue;
+        width: 100%;
+        height: 100vh;
+        opacity: 0.5;
+    }
+    .img-circle {
+        border-radius: 50%;
+    }
+
+   
+</style>
+
+<div class="section">
+    <div class="col">
+        <img class="img-circle mb-2" src='/static/conner.png'/>
+        <div class="h1">Conner Brown</div>
+        <div class="h3">Engineer | Programmer | Adventurer</div>
+    </div>
+    <div class="video-container">
+        <div class="color-overlay"></div>
+        <video autoplay muted loop>
+            <source src="/static/backVid.mp4" type="video/mp4"/>
+        </video>
+    </div>
+</div>
+<!--
+<style>
+    .overlay { 
+            position: absolute; 
+            color: rgb(7, 0, 0); 
+            display: block; 
+            top: 0; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            height: 100%; 
+            width: 100%; 
+            opacity: 0; 
+        } 
+</style>
+    <div class="overlay">Conner Brown</div>
+        <div id ='back' class="bg-image vh-100" style="overflow: hidden">
+            <video class='bg-img' style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
+                <source class="h-100" src="/static/backVid.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+      
+
+<style>
+    /* Height for devices larger than 576px */
+    @media (min-width: 992px) {
+      #intro {
+        margin-top: -58.59px;
+      }
+    }
+
+    .navbar .nav-link {
+      color: #fff !important;
+    }
+  </style>
+<div id="intro" class="bg-image vh-100 shadow-1-strong">
+    <video style="min-width: 100%; min-height: 100%;" playsinline autoplay muted loop>
+      <source class="h-100" src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+    </video>
+    <div class="mask"     style="
+    background: linear-gradient(
+      45deg,
+      rgba(29, 236, 197, 0.7),
+      rgba(91, 14, 214, 0.7) 100%
+    );
+  ">
+      <div class="container d-flex align-items-center justify-content-center text-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Learn Bootstrap 5 with MDB</h1>
+          <h5 class="mb-4">Best & free guide of responsive web design</h5>
+          <a
+            class="btn btn-outline-light btn-lg m-2"
+            href="https://www.youtube.com/watch?v=c9B4TPnak1A"
+            role="button"
+            rel="nofollow"
+            target="_blank"
+            >Start tutorial</a
+          >
+          <a
+            class="btn btn-outline-light btn-lg m-2"
+            href="https://mdbootstrap.com/docs/standard/"
+            target="_blank"
+            role="button"
+            >Download MDB UI KIT</a
+          >
+        </div>
+      </div>
+    </div>
+</div>
+-->
 {% endblock %}
