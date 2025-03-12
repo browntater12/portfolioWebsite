@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row mb-3 mt-3 justify-content-start">
+                        <div class="col text-start">
+                            <h4 class="card-title">Timeline</h4>
+                        </div>
+                        <div class="col text-end">
+                            <button type="button" class=" btn btn-primary"><a href="/static/files/Resume03-11-25.docx" download style="color:#fff; text-decoration:none"> Download Resume</a></button>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <ul class="list-inline d-flex justify-content-between w-100 flex-nowrap overflow-auto">
+                            <li class="list-inline-item event-list">
+                                <div class="px-3">
+                                    <div class="event-date bg-soft-warning text-warning">2014</div>
+                                    <h5 class="font-size-16">Iowa City, IA</h5>
+                                    <p class="text-muted">I was born and raised in Iowa City, Iowa.</p>
+                                    <div>
+                                        <button onclick="myFunction('iowacity')" class="btn btn-primary btn-sm">Read more</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-3">
+                                    <div class="event-date bg-soft-success text-success">2019</div>
+                                    <h5 class="font-size-16">Columbia, MO</h5>
+                                    <p class="text-muted">Graduated from the University of Missouri with an Industrial Engineering degree.</p>
+                                    <div>
+                                        <button onclick="myFunction('columbia')" class="btn btn-primary btn-sm">Read more</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-3">
+                                    <div class="event-date bg-soft-danger text-danger">2023</div>
+                                    <h5 class="font-size-16">Nashville, TN</h5>
+                                    <p class="text-muted">Moved to Nashville for my first job.</p>
+                                    <div>
+                                        <a href="#demo"><button onclick="myFunction('nashville')" class="btn btn-primary btn-sm">Read more</button></a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-inline-item event-list">
+                                <div class="px-3">
+                                    <div class="event-date bg-soft-primary text-primary">Current</div>
+                                    <h5 class="font-size-16">Des Moines, IA</h5>
+                                    <p class="text-muted">Moved back to Des Moines to be closer to family.</p>
+                                    <div>
+                                        <button onclick="myFunction('desmoines')" class="btn btn-primary btn-sm">Read More</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- end card -->
+        </div>
+    </div>
+    <div id="demo" class='container-fluid mt-3'>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <h3 id='title'></h3>
+                <p id='text'></p>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" style="height: 600px; height: 400px;">
+                <img id='pic' src="#" style="visibility:hidden" class='img-fluid'/>
+            </div>
+        </div>    
+    </div>
+    
+    <script>
+        function myFunction(type) {
+            if (type == "iowacity"){
+                document.getElementById("title").innerHTML = "Fourtune";
+                document.getElementById("text").innerHTML = "&emsp; Most people assume all Iowans are farmers, but that wasn’t the case for my family. All four of my grandparents were teachers, and both of my parents grew up relatively poor.<br><br>&emsp; My mom became a pharmacist after her father told her she’d make more in her first year than her parents had ever earned combined. To this day, she swears she didn’t know what an antibiotic was until college. My dad played college basketball, earned his MBA, and, like my mom, went into the pharmaceutical industry.<br><br>&emsp; I grew up upper middle class and attended a private school, where I became a six-time state champion and started my first company, Fourtune. In college, my three friends (pictured to the right) and I won grant money for 3D printing and mined cryptocurrency—my first real taste of entrepreneurship.";
+                document.getElementById("pic").style.visibility = "visible";
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/iowacity.jpeg")) {
+                    Image_Id.src = "/static/iowacity.jpeg";
+                }
+                
+            } else if (type == 'columbia'){
+                document.getElementById("title").innerHTML = "Industrial Engineering"
+                document.getElementById("text").innerHTML = "&emsp; In high school, I was struggling in calculus—barely turning in assignments and honestly just not interested. One day, after staying late to finish a missed quiz, my teacher pulled me aside and asked, <i>'Conner, what do you want to do in college?'</i>. <br><br><i>'I'm thinking engineering,'</i> I replied.<br><br>&emsp;She actually laughed. At that moment, I knew I was going to be an engineer.<br><br>&emsp;I went on to attend the University of Missouri, where I earned a Bachelor of Science in Industrial Engineering. While in Columbia, MO, I did what most college students do—drank too much and tried to survive on ramen. I still take pride in never failing a class, though Greek Mythology my senior year almost got me.<br><br>&emsp;Throughout high school and college, my sister constantly broke her phone. She’d take the family upgrade, leaving me stuck with the older version. So, I did what any engineer would do—I figured out how to repair iPhones. That led me to start a small business called Tiger Crack. I’d go from sorority to sorority fixing iPhones (and trying to meet girls). It usually covered my beer money for the week.<br><br>&emsp;That’s what ultimately led me to Asurion."
+                document.getElementById("pic").style.visibility='visible'
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/miz.JPG")) {
+                    Image_Id.src = "/static/miz.JPG";
+                } 
+                
+            } else if (type == 'nashville'){
+                document.getElementById("title").innerHTML = "Asurion"
+                document.getElementById("text").innerHTML = "&emsp;I found Asurion on LinkedIn while searching for an internship, with my only real differentiator being my experience fixing iPhones. So, I applied to the largest phone insurance and repair company. After completing my internship, I joined full-time as a product engineer.<br>&emsp;On my first day, my previous boss—who I respected greatly—told me he was leaving. With little time to adjust, I was thrown onto the R&D product engineering team, responsible for bringing new and innovative solutions into the business. At first, I loved it. I was hungry to prove myself, and my new boss, well aware of my drive, assigned me to the team’s biggest problems—all of which involved third-party software systems that weren’t functioning as expected.<br>&emsp;I jumped in headfirst, eager for the challenge. I quickly became the company’s subject matter expert on these platforms and ended up rewriting the low-code configurations that had been implemented during setup. After proving that my changes could drastically improve throughput, I approached upper management. No one would approve the changes, fearing they might disrupt global operations.<br>&emsp;After a month of waiting, I told the team, 'If this fails, it’s fully on me, but I’m taking the leap.' The result? We cut processing time per device worldwide by about 50%. That was my first real lesson in corporate politics.<br>&emsp;Being so immersed in software during my first two years at Asurion, I started taking night classes in software development. Eventually, I transitioned into a software engineering role, working on our ERP system. But over time, I realized how little impact I was actually making on the business.<br><br>Frustrated, I quit.<br><br>Over the next year, I traveled, played a ton of golf, and tried to build a business."
+                document.getElementById("pic").style.visibility = "visible";
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/asurion.jpg")) {
+                    Image_Id.src = "/static/asurion.jpg";
+                }
+
+            } else if (type == 'desmoines'){
+                document.getElementById("title").innerHTML = "Fastenal"
+                document.getElementById("text").innerHTML = "&emsp;After a year, I had spent most of my money on golf and Rocket Lab stock (RKLB to the moon), and it was time to transition back into a corporate role<br><br>&emsp;With most of my immediate family in pharmaceutical sales, I figured sales would be a good path to explore. I set my LinkedIn to Open to Work and started applying for Sales Engineering positions. To my surprise, no one in high-paying sales roles wanted an engineer with zero experience who had just taken a gap year. This would be my third time essentially starting from scratch—but that only made me more excited to figure it out.<br><br>&emsp;Fastenal reached out to me on LinkedIn after I applied. The job description was vague when it came to compensation, but overall, I’d be leading presentations, identifying cost savings, and selling solutions. I didn’t mind taking a 40% pay cut from my last corporate job—I wasn’t happy anyway. I joined the role excited to prove myself and sell a ton of bolts.<br><br>&emsp;To my surprise, I was more of a technical advisor than a true salesperson—essentially telling customers, 'Hey, this bolt is wrong; you should be using this one instead.' I started calling it solution-based sales.<br><br>&emsp;After about eight months, they finally let me operate more independently—or so I thought. I soon learned that my commission was heavily capped and that I’d have to fight for every dollar I earned. After a year, I had made $10K less than they had originally promised, despite leading North America in tasks. The breaking point came when I was essentially told to slow down.<br><br>&emsp;I couldn’t keep being micromanaged and underpaid—so the search has begun."
+                document.getElementById("pic").style.visibility='visible'
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/fastenal.jpg")) {
+                    Image_Id.src = "/static/fastenal.jpg";
+                }
+            }
+        }
+    </script>
+{% endblock %}
