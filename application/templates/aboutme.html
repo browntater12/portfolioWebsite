@@ -11,6 +11,7 @@
                             <h4 class="card-title">Timeline</h4>
                         </div>
                         <div class="col text-end">
+<<<<<<< HEAD
                             <button type="button" class=" btn btn-primary"><a href="/static/files/Resume03-11-25.docx" download style="color:#fff; text-decoration:none"> Download Resume</a></button>
                         </div>
                     </div>
@@ -23,36 +24,77 @@
                                     <p class="text-muted">I was born and raised in Iowa City, Iowa.</p>
                                     <div>
                                         <button onclick="myFunction('iowacity')" class="btn btn-primary btn-sm">Read more</button>
+=======
+                            <button type="button" class=" btn btn-primary"><a href="/static/files/Resume.docx" download style="color:#fff; text-decoration:none"> Download Resume</a></button>
+                        </div>
+                    </div>
+                    <div class="hori-timeline" dir="ltr">
+                        <ul class="list-inline events">
+                            <li class="list-inline-item event-list">
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-primary text-primary">1996</div>
+                                    <h5 class="font-size-16">Born In Iowa City</h5>
+                                    <p class="text-muted">I was born and raised in Iowa City, Iowa where I attended Regina Elementary and High School.</p>
+                                    <div>
+                                        <button onclick="myFunction('iowa')" class="btn btn-primary btn-sm">Read more</button>
+>>>>>>> bcbef19e92ea443ba864bf82534861aefc3dfa0d
                                     </div>
                                 </div>
                             </li>
                             <li class="list-inline-item event-list">
+<<<<<<< HEAD
                                 <div class="px-3">
                                     <div class="event-date bg-soft-success text-success">2019</div>
                                     <h5 class="font-size-16">Columbia, MO</h5>
                                     <p class="text-muted">Graduated from the University of Missouri with an Industrial Engineering degree.</p>
                                     <div>
                                         <button onclick="myFunction('columbia')" class="btn btn-primary btn-sm">Read more</button>
+=======
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-success text-success">2014</div>
+                                    <h5 class="font-size-16">Founded Fourtune</h5>
+                                    <p class="text-muted">Three of my best friends and I started a business in developed and developing technologies.</p>
+                                    <div>
+                                        <button onclick="myFunction('fourtune')" class="btn btn-primary btn-sm">Read more</button>
+>>>>>>> bcbef19e92ea443ba864bf82534861aefc3dfa0d
                                     </div>
                                 </div>
                             </li>
                             <li class="list-inline-item event-list">
+<<<<<<< HEAD
                                 <div class="px-3">
                                     <div class="event-date bg-soft-danger text-danger">2023</div>
                                     <h5 class="font-size-16">Nashville, TN</h5>
                                     <p class="text-muted">Moved to Nashville for my first job.</p>
                                     <div>
                                         <a href="#demo"><button onclick="myFunction('nashville')" class="btn btn-primary btn-sm">Read more</button></a>
+=======
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-danger text-danger">2019</div>
+                                    <h5 class="font-size-16">Graduated College</h5>
+                                    <p class="text-muted">Graduated from the University of Missouri with a Bachelors of Science in Industrial Engineering.</p>
+                                    <div>
+                                        <button onclick="myFunction('college')" class="btn btn-primary btn-sm">Read more</button>
+>>>>>>> bcbef19e92ea443ba864bf82534861aefc3dfa0d
                                     </div>
                                 </div>
                             </li>
                             <li class="list-inline-item event-list">
+<<<<<<< HEAD
                                 <div class="px-3">
                                     <div class="event-date bg-soft-primary text-primary">Current</div>
                                     <h5 class="font-size-16">Des Moines, IA</h5>
                                     <p class="text-muted">Moved back to Des Moines to be closer to family.</p>
                                     <div>
                                         <button onclick="myFunction('desmoines')" class="btn btn-primary btn-sm">Read More</button>
+=======
+                                <div class="px-4">
+                                    <div class="event-date bg-soft-warning text-warning">2020</div>
+                                    <h5 class="font-size-16">Moved to Nashville</h5>
+                                    <p class="text-muted">Moved to Nashville to be a Product Engineer for Asurion.</p>
+                                    <div>
+                                        <a href="#demo"><button onclick="myFunction('nashville')" class="btn btn-primary btn-sm">Read more</button></a>
+>>>>>>> bcbef19e92ea443ba864bf82534861aefc3dfa0d
                                     </div>
                                 </div>
                             </li>
@@ -78,6 +120,7 @@
     
     <script>
         function myFunction(type) {
+<<<<<<< HEAD
             if (type == "iowacity"){
                 document.getElementById("title").innerHTML = "Fourtune";
                 document.getElementById("text").innerHTML = "&emsp; Most people assume all Iowans are farmers, but that wasn’t the case for my family. All four of my grandparents were teachers, and both of my parents grew up relatively poor.<br><br>&emsp; My mom became a pharmacist after her father told her she’d make more in her first year than her parents had ever earned combined. To this day, she swears she didn’t know what an antibiotic was until college. My dad played college basketball, earned his MBA, and, like my mom, went into the pharmaceutical industry.<br><br>&emsp; I grew up upper middle class and attended a private school, where I became a six-time state champion and started my first company, Fourtune. In college, my three friends (pictured to the right) and I won grant money for 3D printing and mined cryptocurrency—my first real taste of entrepreneurship.";
@@ -112,6 +155,42 @@
                 var Image_Id = document.getElementById('pic');
                 if (!Image_Id.src.match("/static/fastenal.jpg")) {
                     Image_Id.src = "/static/fastenal.jpg";
+=======
+            if (type == "iowa"){
+                document.getElementById("title").innerHTML = "Iowa";
+                document.getElementById("text").innerHTML = "&emsp; Family is my priority, from left to right we have Julie, Kieler, me, Kennedy, and Mark. I am the eldest child. My parents are also native Iowans, so our roots run deep in Iowa. We are a very adventurous group, who love the outdoors. Growing up I attended Regina Catholic Education Center. During highschool I became a 6-time state champion between soccer and football. ";
+                document.getElementById("pic").style.visibility = "visible";
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/iowa.jpg")) {
+                    Image_Id.src = "/static/iowa.jpg";
+                }
+                
+            } else if (type == 'fourtune'){
+                document.getElementById("title").innerHTML = "Fourtune"
+                document.getElementById("text").innerHTML = "&emsp; Fourtune, a small business, started my senior year of high school flipping computer parts. Initially we were involved in buying older DNA sequencing systems and reselling them to retail consumers. Once that model had run its course we became involved in crypto mining by building custom mining rigs. After mining we pivoted to 3D printing, there we were awarded seed money to pursue an idea in 3D design. Today Fourtune has become a media and entertainment business specializing in events planning. "
+                document.getElementById("pic").style.visibility='visible'
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/image.jpeg")) {
+                    Image_Id.src = "/static/image.jpeg";
+                } 
+                
+            } else if (type == 'college'){
+                document.getElementById("title").innerHTML = "College"
+                document.getElementById("text").innerHTML = "&emsp;I attended the University of Missouri where I recieved my Bachelors of Science in Industrial Engineering. While  at Mizzou I joined the Alpha Tau Omega fraternity and met some of my best friends. During college I got my first taste of software and absolutely hated it. I mostly to hardware during college with 3D printing and iPhone repair."
+                document.getElementById("pic").style.visibility = "visible";
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/miz.JPG")) {
+                    Image_Id.src = "/static/miz.JPG";
+                }
+
+            } else if (type == 'nashville'){
+                document.getElementById("title").innerHTML = "Nashville"
+                document.getElementById("text").innerHTML = "&emsp;In college started repairing iPhones, which led me to Asurion. I was interested in businesses that repaired professionally and found the team in Nashville. After interning with Asurion, I knew it was a fit and moved to Nashville post graduation. While at Asurion I've developed a passion for software, and actively continue my education in it."
+                document.getElementById("pic").style.visibility='visible'
+                var Image_Id = document.getElementById('pic');
+                if (!Image_Id.src.match("/static/download.jpg")) {
+                    Image_Id.src = "/static/download.jpg";
+>>>>>>> bcbef19e92ea443ba864bf82534861aefc3dfa0d
                 }
             }
         }
