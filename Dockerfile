@@ -7,21 +7,18 @@ WORKDIR /app
 # Copy requirements first (for better caching)
 COPY requirements.txt .
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install dependencies and Gunicorn
+RUN pip install --no-cache-dir -r requirements.txt gunicorn
 
 # Copy the rest of the application
 COPY . .
 
-# Expose port 5000
-EXPOSE 5000
+# Expose port 8000 (Gunicorn's default)
+EXPOSE 8080
 
-# Set environment variables
+# Set production environment
 ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
+ENV FLASK_ENV=production
 
-# Install python-dotenv since we're using .flaskenv
-RUN pip install python-dotenv
-
-# Command to run the application
-CMD ["flask", "run", "--host=0.0.0.0"] 
+# Command to run the application with Gunicorn
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app", "--workers", "3"] 
